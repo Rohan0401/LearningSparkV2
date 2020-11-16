@@ -38,8 +38,8 @@ object Example3_7 {
     blogsDF.select(expr("Hits") * 2).show(2)
     blogsDF.select(col("Hits") * 2).show(2)
     blogsDF.select(expr("Hits * 2")).show(2)
-   // show heavy hitters
-   blogsDF.withColumn("Big Hitters", (expr("Hits > 10000"))).show()
+    // show heavy hitters
+    blogsDF.withColumn("Big Hitters", (expr("Hits > 10000"))).show()
 
   }
 }
